@@ -79,22 +79,15 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section className="relative px-4 pb-20 pt-10">
+      <section className="relative px-4 pb-20 pt-16">
         <motion.div
-          className="mx-auto max-w-5xl"
+          className="mx-auto max-w-4xl"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <motion.h2
-            className="mb-12 text-center text-2xl font-semibold text-slate-300"
-            variants={fadeInUp}
-          >
-            Featured Projects
-          </motion.h2>
-
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             {projects.map((project, index) => {
               const Icon = project.icon;
               return (
@@ -103,11 +96,7 @@ export default function HomePage() {
                   variants={fadeInUp}
                   custom={index}
                 >
-                  <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-2xl hover:shadow-violet-500/10">
-                    {/* Gradient background on hover */}
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
-                    />
+                  <div className="group rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 transition-all duration-300 hover:border-white/[0.15] hover:bg-white/[0.04]">
 
                     <div className="relative">
                       {/* Icon & Name */}
