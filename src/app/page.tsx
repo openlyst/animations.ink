@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Palette, ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import { Sparkles, Palette, ExternalLink, Gitlab, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
