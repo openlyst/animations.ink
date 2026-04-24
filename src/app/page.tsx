@@ -190,7 +190,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm text-slate-400 transition-colors duration-300 hover:text-white"
           >
-            <Github className="h-4 w-4" />
+            <Code2 className="h-4 w-4" />
             View all projects on GitLab
           </Link>
         </motion.div>
