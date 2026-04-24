@@ -113,17 +113,14 @@ export default function HomePage() {
                       {/* Icon & Name */}
                       <div className="mb-4 flex items-center gap-3">
                         <div
-                          className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-colors duration-300 group-hover:border-white/20"
+                          className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-colors duration-300 group-hover:border-white/20"
                           style={{ color: project.accent }}
                         >
-                          <Icon className="h-6 w-6" />
+                          <Icon className="h-5 w-5" />
                         </div>
-                        <div>
-                          <h3 className="text-xl font-semibold text-white">
-                            {project.name}
-                          </h3>
-                          <p className="text-sm text-slate-500">Open Source</p>
-                        </div>
+                        <h3 className="text-lg font-medium text-white">
+                          {project.name}
+                        </h3>
                       </div>
 
                       {/* Description */}
