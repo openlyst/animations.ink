@@ -8,21 +8,19 @@ const projects = [
   {
     id: "vidlatte",
     name: "vidlatte.ink",
-    description: "A Plex-like platform for AI tools. Self-hosted AI image generation with ComfyUI, LLM chat, and community sharing - all outside your home network.",
+    description: "Plex-like platform for AI. Self-hosted image generation with ComfyUI and LLM chat.",
     url: "https://vidlatte.ink",
     repo: "https://gitlab.com/HttpAnimations/vidlatte",
     icon: Sparkles,
-    gradient: "from-violet-500/20 to-fuchsia-500/20",
     accent: "#8b5cf6",
   },
   {
     id: "animations",
     name: "animations.ink",
-    description: "This landing page - a curated showcase of HttpAnimations projects. Clean design, subtle animations, and open source.",
+    description: "Project showcase and landing page. Built with Next.js, Tailwind, and Framer Motion.",
     url: "https://animations.ink",
     repo: "https://gitlab.com/HttpAnimations/animations.ink",
     icon: Palette,
-    gradient: "from-indigo-500/20 to-cyan-500/20",
     accent: "#6366f1",
   },
 ];
@@ -118,25 +116,23 @@ export default function HomePage() {
                       </p>
 
                       {/* Links */}
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-2">
                         <Link
                           href={project.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 rounded-lg bg-white/10 px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-white/20"
+                          className="text-sm text-slate-300 transition-colors hover:text-white"
                         >
-                          <ExternalLink className="h-4 w-4" />
-                          Visit Site
-                          <ArrowUpRight className="h-3 w-3 opacity-50" />
+                          Live site →
                         </Link>
+                        <span className="text-slate-600">·</span>
                         <Link
                           href={project.repo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-medium text-slate-400 transition-all duration-300 hover:border-white/20 hover:text-white"
+                          className="text-sm text-slate-500 transition-colors hover:text-slate-300"
                         >
-                          <Code2 className="h-4 w-4" />
-                          GitLab
+                          Source
                         </Link>
                       </div>
                     </div>
