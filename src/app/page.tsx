@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Palette, ExternalLink, Gitlab, ArrowUpRight } from "lucide-react";
+import { Sparkles, Palette, ExternalLink, Code2, ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
@@ -159,7 +159,7 @@ export default function HomePage() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-medium text-slate-400 transition-all duration-300 hover:border-white/20 hover:text-white"
                         >
-                          <Github className="h-4 w-4" />
+                          <Code2 className="h-4 w-4" />
                           GitLab
                         </Link>
                       </div>
