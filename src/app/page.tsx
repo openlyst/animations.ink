@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Palette, ExternalLink, Code2, ArrowUpRight } from "lucide-react";
+import { Sparkles, Palette } from "lucide-react";
 
 const projects = [
   {
@@ -154,16 +154,15 @@ export default function HomePage() {
           transition={{ delay: 0.2 }}
         >
           <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} HttpAnimations. All projects are open source.
+            © {new Date().getFullYear()} HttpAnimations
           </p>
           <Link
             href="https://gitlab.com/HttpAnimations"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-slate-400 transition-colors duration-300 hover:text-white"
+            className="text-sm text-slate-400 transition-colors hover:text-white"
           >
-            <Code2 className="h-4 w-4" />
-            View all projects on GitLab
+            gitlab.com/HttpAnimations
           </Link>
         </motion.div>
       </footer>
