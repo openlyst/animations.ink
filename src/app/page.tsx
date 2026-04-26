@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Palette } from "lucide-react";
+import { Sparkles, Palette, Music } from "lucide-react";
 
 const projects = [
   {
@@ -22,6 +22,15 @@ const projects = [
     repo: "https://gitlab.com/HttpAnimations/animations.ink",
     icon: Palette,
     accent: "#6366f1",
+  },
+  {
+    id: "beatsaber",
+    name: "beatsabermapping.site",
+    description: "Auto mapping tool for Beat Saber PC mods. Generate beatmaps automatically from audio.",
+    url: "https://beatsabermappingsite-5ca70d.gitlab.io/",
+    repo: "https://gitlab.com/HttpAnimations/BeatSaberMappingSite",
+    icon: Music,
+    accent: "#ec4899",
   },
 ];
 
