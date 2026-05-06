@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Palette, Music } from "lucide-react";
+import { Sparkles, Palette, Music, Image } from "lucide-react";
 
 const projects = [
   {
@@ -31,6 +31,15 @@ const projects = [
     repo: "https://gitlab.com/HttpAnimations/BeatSaberMappingSite",
     icon: Music,
     accent: "#ec4899",
+  },
+  {
+    id: "klit",
+    name: "klit.animations.ink",
+    description: "Modern frontend for image boards. Clean design, smooth animations, and safe browsing by default.",
+    url: "https://klit.animations.ink/",
+    repo: "https://gitlab.com/HttpAnimations/open621",
+    icon: Image,
+    accent: "#06b6d4",
   },
 ];
 
