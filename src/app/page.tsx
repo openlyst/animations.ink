@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Sparkles, Palette, Music, Image } from "lucide-react";
+import { Sparkles, Palette, Music, Image, Globe } from "lucide-react";
 
 const projects = [
   {
@@ -40,6 +40,15 @@ const projects = [
     repo: "https://gitlab.com/HttpAnimations/open621",
     icon: Image,
     accent: "#06b6d4",
+  },
+  {
+    id: "openlyst",
+    name: "openlyst.ink",
+    description: "Open source project.",
+    url: "https://openlyst.ink",
+    repo: "https://gitlab.com/Openlyst/",
+    icon: Globe,
+    accent: "#10b981",
   },
 ];
 
