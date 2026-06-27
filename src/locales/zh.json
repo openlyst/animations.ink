@@ -1,0 +1,54 @@
+{
+  "language.code": "zh",
+  "language.name": "中文",
+
+  "hero.tagline": "{author} 的项目合集。做些好用、能自己部署、还好看的 AI 工具。",
+
+  "projects.live_site": "去看看 →",
+  "projects.source": "源码",
+  "projects.vidlatte.description": "Plex 风格的 AI 平台。用 ComfyUI 本地生图，还能跟 LLM 聊天。",
+  "projects.animations.description": "项目展示与落地页。用 Next.js 和 Tailwind 搭建，风格简洁。",
+  "projects.klit.description": "清爽的图站前端。设计简洁，动画流畅，默认屏蔽敏感内容。",
+  "projects.openlyst.description": "开源应用，关注隐私、自由与社区。DouDou 音乐播放器就是他们做的。",
+
+  "footer.copyright": "© {year} HttpAnimations",
+  "footer.gitlab": "gitlab.com/HttpAnimations",
+  "footer.privacy": "隐私",
+  "footer.contact": "联系",
+
+  "error.title": "出错了",
+  "error.try_again": "再试一次",
+  "global_error.title": "严重错误",
+  "global_error.reload": "刷新页面",
+  "not_found.title": "404",
+  "not_found.subtitle": "页面不存在",
+  "not_found.description": "你找的页面不在了，或者已经被移走了。",
+  "not_found.go_home": "回首页",
+  "loading.text": "加载中…",
+
+  "theme.light": "浅色",
+  "theme.dark": "深色",
+  "theme.activate_light": "切换到浅色主题",
+  "theme.activate_dark": "切换到深色主题",
+
+  "privacy.title": "隐私政策",
+  "privacy.last_updated": "最后更新：2026 年 6 月 27 日",
+  "privacy.intro": "本隐私政策说明了 animations.ink（下称「本站」）在您访问时会怎么处理您的信息。本站是个纯静态展示页面，没有表单、没有账号系统、不追踪用户，也没有嵌入任何第三方内容。",
+  "privacy.data_collected.title": "我们收集哪些数据",
+  "privacy.data_collected.body": "本站**不收集任何个人数据**。我们不会获取您的 IP、浏览器指纹、邮箱、姓名，或其他任何能定位到您身份的信息。没有后端服务器，没有数据库，没有分析服务，也没有第三方追踪脚本。",
+  "privacy.local_storage.title": "本地存储（localStorage）",
+  "privacy.local_storage.body": "为了记住您的偏好，本站会在浏览器的 localStorage 里存两样东西：语言设置（{lang}）和主题设置（{theme}）。这些东西只留在您自己的设备上，不会发给任何服务器或第三方。随时可以在浏览器设置里清掉。",
+  "privacy.how_to_clear.title": "怎么清除这些数据",
+  "privacy.how_to_clear.body": "随时可以通过浏览器设置清除 localStorage：Chrome — 设置 → 隐私和安全 → 清除浏览数据 → Cookie 及其他网站数据；Firefox — 设置 → 隐私与安全 → Cookie 和网站数据 → 清除数据；Safari — 设置 → Safari → 清除历史记录和网站数据。也可以用开发者工具（F12），在「应用程序」或「存储」标签页里直接清。",
+  "privacy.third_party.title": "第三方服务",
+  "privacy.third_party.body": "本站用了 Google Fonts（Geist 字体），但所有字体文件都在构建时下载好了，存在本站自己的服务器上。访问者的浏览器会从 animations.ink 加载字体，**不会去连 Google 的服务器**。本站没有嵌入任何第三方内容、没有加载外部脚本、也没有设置 HTTP Cookie。",
+  "privacy.rights.title": "您的权利",
+  "privacy.rights.body": "根据相关数据保护法律（包括 GDPR、LGPD、PIPL、PIPA 等），您拥有以下权利：知情权 – 了解收集了哪些数据及用途；查阅权 – 查看您的个人数据；更正权 – 要求修正不准确的信息；删除权 – 要求删除您的数据（被遗忘权）；限制处理权 – 在特定情况下限制数据处理；数据可携权 – 以结构化格式获取您的数据；反对权 – 反对基于正当利益的数据处理；撤回同意权 – 随时撤回您的同意，不影响撤回前处理的合法性。由于本站几乎不收集任何数据，行使这些权利通常只要清一下浏览器里的 localStorage 就行。有任何问题，通过下方的联系方式找我们。",
+  "privacy.contact.title": "联系方式",
+  "privacy.contact.body": "如果您对本隐私政策有任何疑问，或者想行使您的数据保护权利，请发邮件到 {email}。",
+
+  "consent.banner": "本站会把你的语言和主题偏好存在浏览器本地。不会收集或上传任何个人数据。",
+  "consent.got_it": "好的",
+
+  "contact.email": "privacy@animations.ink"
+}

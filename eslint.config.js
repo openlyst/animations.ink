@@ -1,18 +1,24 @@
-import { FlatCompat } from "@eslint/eslintrc";
+import nextPlugin from "@next/eslint-plugin-next";
+import eslintReact from "@eslint-react/eslint-plugin";
+import reactHooks from "eslint-plugin-react-hooks";
 import tseslint from "typescript-eslint";
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-});
 
 export default tseslint.config(
   {
-    ignores: [".next"],
+    ignores: [".next", "dist", "next-env.d.ts"],
   },
-  ...compat.extends("next/core-web-vitals"),
+  {
+    name: "next/recommended",
+    plugins: {
+      "@next/next": nextPlugin,
+    },
+    rules: nextPlugin.configs.recommended.rules,
+  },
+  eslintReact.configs["recommended"],
   {
     files: ["**/*.ts", "**/*.tsx"],
     extends: [
+      eslintReact.configs["recommended-type-checked"],
       ...tseslint.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
@@ -29,11 +35,18 @@ export default tseslint.config(
         { argsIgnorePattern: "^_" },
       ],
       "@typescript-eslint/require-await": "off",
+      "@next/next/no-img-element": "off",
       "@typescript-eslint/no-misused-promises": [
         "error",
         { checksVoidReturn: { attributes: false } },
       ],
     },
+  },
+  {
+    plugins: {
+      "react-hooks": reactHooks,
+    },
+    rules: reactHooks.configs.flat["recommended-latest"].rules,
   },
   {
     linterOptions: {

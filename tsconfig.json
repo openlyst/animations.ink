@@ -30,7 +30,6 @@
     ],
     "incremental": true,
     /* Path Aliases */
-    "baseUrl": ".",
     "paths": {
       "~/*": [
         "./src/*"
@@ -48,6 +47,9 @@
   ],
   "exclude": [
     "node_modules",
-    "generated"
+    "generated",
+    "scripts",
+    "dist",
+    ".next"
   ]
 }
