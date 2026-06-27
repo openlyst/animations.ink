@@ -4,25 +4,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build",
-    "check": "next lint && tsc --noEmit",
-    "dev": "next dev --turbo",
+    "build": "node scripts/build-locales.js && next build",
+    "check": "next lint && tsc --noEmit && npm run doctor",
+    "doctor": "node scripts/doctor.mjs",
+    "dev": "node scripts/build-locales.js && next dev --turbo",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "preview": "next build && next start",
+    "preview": "next build && node preview.mjs 3000",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "^0.12.0",
-    "framer-motion": "^12.38.0",
-    "lucide-react": "^1.11.0",
     "next": "^15.2.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "zod": "^3.24.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",

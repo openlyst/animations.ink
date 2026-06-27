@@ -45,3 +45,9 @@ yarn-error.log*
 # idea files
 .idea
 /dist
+
+# build-generated favicons
+/public/favicons
+
+# generated locale manifest
+/src/locales/manifest.json

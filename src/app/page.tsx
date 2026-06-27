@@ -1,198 +1,170 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { Sparkles, Palette, Music, Image, Globe } from "lucide-react";
+import { useI18n } from "~/lib/i18n-context";
+import LanguagePicker from "~/components/LanguagePicker";
+import ThemeSwitcher from "~/components/ThemeSwitcher";
+import ConsentBanner from "~/components/ConsentBanner";
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 const projects = [
   {
     id: "vidlatte",
     name: "vidlatte.ink",
-    description: "Plex-like platform for AI. Self-hosted image generation with ComfyUI and LLM chat.",
     url: "https://vidlatte.ink",
     repo: "https://gitlab.com/HttpAnimations/vidlatte",
-    icon: Sparkles,
-    accent: "#8b5cf6",
+    descKey: "projects.vidlatte.description",
+    favicon: "https://vidlatte.ink/apple-touch-icon.png",
   },
   {
     id: "animations",
     name: "animations.ink",
-    description: "Project showcase and landing page. Built with Next.js, Tailwind, and Framer Motion.",
     url: "https://animations.ink",
     repo: "https://gitlab.com/HttpAnimations/animations.ink",
-    icon: Palette,
-    accent: "#6366f1",
-  },
-  {
-    id: "beatsaber",
-    name: "beatsabermapping.site",
-    description: "Auto mapping tool for Beat Saber PC mods. Generate beatmaps automatically from audio.",
-    url: "https://beatsabermappingsite-5ca70d.gitlab.io/",
-    repo: "https://gitlab.com/HttpAnimations/BeatSaberMappingSite",
-    icon: Music,
-    accent: "#ec4899",
+    descKey: "projects.animations.description",
+    favicon: "https://animations.ink/favicon.ico",
   },
   {
     id: "klit",
     name: "klit.animations.ink",
-    description: "Modern frontend for image boards. Clean design, smooth animations, and safe browsing by default.",
     url: "https://klit.animations.ink/",
     repo: "https://gitlab.com/HttpAnimations/open621",
-    icon: Image,
-    accent: "#06b6d4",
+    descKey: "projects.klit.description",
+    favicon: "https://klit.animations.ink/icon.svg",
   },
   {
     id: "openlyst",
     name: "openlyst.ink",
-    description: "Open source project.",
     url: "https://openlyst.ink",
     repo: "https://gitlab.com/Openlyst/",
-    icon: Globe,
-    accent: "#10b981",
+    descKey: "projects.openlyst.description",
+    favicon: "https://openlyst.ink/favicon.svg",
   },
 ];
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
-};
-
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 export default function HomePage() {
+  const { t } = useI18n();
+
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#0a0a0f]">
+    <main className="relative min-h-screen overflow-hidden bg-[var(--color-bg-primary)]">
       {/* Background gradient orbs */}
-      <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -left-[20%] -top-[10%] h-[600px] w-[600px] rounded-full bg-violet-600/10 blur-[120px]" />
-        <div className="absolute -bottom-[10%] -right-[20%] h-[500px] w-[500px] rounded-full bg-indigo-600/10 blur-[100px]" />
+      <div className="pointer-events-none fixed inset-0 overflow-hidden max-md:hidden">
+        <div className="absolute -left-[20%] -top-[10%] h-[600px] w-[600px] rounded-full blur-[120px]" style={{ backgroundColor: "var(--color-orb-1)" }} />
+        <div className="absolute -bottom-[10%] -right-[20%] h-[500px] w-[500px] rounded-full blur-[100px]" style={{ backgroundColor: "var(--color-orb-2)" }} />
       </div>
 
       {/* Hero Section */}
       <section className="relative flex min-h-[60vh] flex-col items-center justify-center px-4 pt-20">
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-        >
-          <h1 className="mb-6 text-5xl font-bold tracking-tight text-white sm:text-7xl">
-            <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+        <div className="hero-wrapper text-center">
+          <h1 className="mb-6 text-5xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-7xl">
+            <span className="bg-gradient-to-r bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(to right, var(--color-hero-from), var(--color-hero-via), var(--color-hero-to))" }}>
               animations
             </span>
             <span className="text-violet-500">.ink</span>
           </h1>
 
-          <motion.p
-            className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-400 sm:text-xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            A curated collection of projects by{" "}
-            <span className="text-white">HttpAnimations</span>. Building tools
-            that make AI accessible, self-hosted, and beautiful.
-          </motion.p>
-        </motion.div>
+          <p className="hero-tagline mx-auto max-w-2xl text-lg leading-relaxed text-[var(--color-text-secondary)] sm:text-xl">
+            {t("hero.tagline", { author: "HttpAnimations" })}
+          </p>
+        </div>
       </section>
 
       {/* Projects Section */}
       <section className="relative px-4 pb-20 pt-16">
-        <motion.div
-          className="mx-auto max-w-4xl"
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          <div className="grid gap-4 md:grid-cols-2">
-            {projects.map((project, index) => {
-              const Icon = project.icon;
-              return (
-                <motion.div
-                  key={project.id}
-                  variants={fadeInUp}
-                  custom={index}
-                >
-                  <div className="group rounded-xl border border-white/[0.08] bg-white/[0.02] p-5 transition-all duration-300 hover:border-white/[0.15] hover:bg-white/[0.04]">
+        <div className="mx-auto max-w-4xl">
+          <div className="grid gap-[16.180340px] md:grid-cols-2">
+            {projects.map((project) => (
+              <div key={project.id} className="project-card">
+                <div className="group rounded-[16.180340px] border border-[var(--color-border)] bg-[var(--color-bg-card)] p-[26.180340px] transition-all duration-300 hover:border-[var(--color-border-hover)] hover:bg-[var(--color-bg-hover)]">
 
-                    <div className="relative">
-                      {/* Icon & Name */}
-                      <div className="mb-4 flex items-center gap-3">
-                        <div
-                          className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 transition-colors duration-300 group-hover:border-white/20"
-                          style={{ color: project.accent }}
-                        >
-                          <Icon className="h-5 w-5" />
-                        </div>
-                        <h3 className="text-lg font-medium text-white">
-                          {project.name}
-                        </h3>
+                  <div className="relative">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-[10px] border border-[var(--color-border)] bg-[var(--color-bg-raised)] transition-colors duration-300 group-hover:border-[var(--color-border-hover)]">
+                        <Image
+                          src={project.favicon}
+                          alt=""
+                          width={20}
+                          height={20}
+                          className="h-5 w-5"
+                        />
                       </div>
+                      <h3 className="text-lg font-medium text-[var(--color-text-primary)]">
+                        {project.name}
+                      </h3>
+                    </div>
 
-                      {/* Description */}
-                      <p className="mb-6 leading-relaxed text-slate-400">
-                        {project.description}
-                      </p>
+                    <p className="mb-6 leading-relaxed text-[var(--color-text-secondary)]">
+                      {t(project.descKey)}
+                    </p>
 
-                      {/* Links */}
-                      <div className="flex items-center gap-2">
-                        <Link
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-slate-300 transition-colors hover:text-white"
-                        >
-                          Live site →
-                        </Link>
-                        <span className="text-slate-600">·</span>
-                        <Link
-                          href={project.repo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-slate-500 transition-colors hover:text-slate-300"
-                        >
-                          Source
-                        </Link>
-                      </div>
+                    <div className="flex items-center gap-2">
+                      <Link
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-[var(--color-text-link)] transition-colors hover:text-[var(--color-text-link-hover)]"
+                      >
+                        {t("projects.live_site")}
+                      </Link>
+                      <span className="text-[var(--color-text-muted)]">·</span>
+                      <Link
+                        href={project.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text-link)]"
+                      >
+                        {t("projects.source")}
+                      </Link>
                     </div>
                   </div>
-                </motion.div>
-              );
-            })}
+                </div>
+              </div>
+            ))}
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Footer */}
-      <footer className="relative border-t border-white/10 px-4 py-8">
-        <motion.div
-          className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 sm:flex-row"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-        >
-          <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} HttpAnimations
-          </p>
-          <Link
-            href="https://gitlab.com/HttpAnimations"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-slate-400 transition-colors hover:text-white"
-          >
-            gitlab.com/HttpAnimations
-          </Link>
-        </motion.div>
+      <footer className="relative border-t border-[var(--color-border)] px-4 py-10">
+        <div className="footer mx-auto flex max-w-5xl flex-col items-center gap-6 md:flex-row md:justify-between">
+          <div className="flex flex-col items-center gap-3 md:flex-row md:gap-6">
+            <p className="text-sm text-[var(--color-text-muted)]">
+              {t("footer.copyright", { year: CURRENT_YEAR })}
+            </p>
+            <span className="hidden text-[var(--color-text-muted)] md:inline">·</span>
+            <Link
+              href="/privacy/"
+              className="py-1.5 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-link-hover)] md:py-0"
+            >
+              {t("footer.privacy")}
+            </Link>
+            <span className="hidden text-[var(--color-text-muted)] md:inline">·</span>
+            <a
+              href={`mailto:${t("contact.email")}`}
+              className="py-1.5 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-link-hover)] md:py-0"
+            >
+              {t("footer.contact")}
+            </a>
+          </div>
+          <div className="flex items-center gap-3">
+            <LanguagePicker />
+            <ThemeSwitcher />
+            <span className="hidden text-[var(--color-text-muted)] md:inline">·</span>
+            <Link
+              href="https://gitlab.com/HttpAnimations"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-1.5 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-link-hover)] md:py-0"
+            >
+              {t("footer.gitlab")}
+            </Link>
+          </div>
+        </div>
       </footer>
+
+      <ConsentBanner />
     </main>
   );
 }

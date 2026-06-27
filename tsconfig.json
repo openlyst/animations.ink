@@ -48,6 +48,9 @@
   ],
   "exclude": [
     "node_modules",
-    "generated"
+    "generated",
+    "scripts",
+    "dist",
+    ".next"
   ]
 }

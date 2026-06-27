@@ -1,0 +1,54 @@
+{
+  "language.code": "en",
+  "language.name": "English",
+
+  "hero.tagline": "A curated collection of projects by {author}. Building tools that make AI accessible, self-hosted, and beautiful.",
+
+  "projects.live_site": "Live site →",
+  "projects.source": "Source",
+  "projects.vidlatte.description": "Plex-like platform for AI. Self-hosted image generation with ComfyUI and LLM chat.",
+  "projects.animations.description": "Project showcase and landing page. Built with Next.js and Tailwind.",
+  "projects.klit.description": "Modern frontend for image boards. Clean design, smooth animations, and safe browsing by default.",
+  "projects.openlyst.description": "Free & open-source apps for privacy, freedom, and community. Creators of DouDou music player.",
+
+  "footer.copyright": "© {year} HttpAnimations",
+  "footer.gitlab": "gitlab.com/HttpAnimations",
+  "footer.privacy": "Privacy",
+  "footer.contact": "Contact",
+
+  "error.title": "Something went wrong",
+  "error.try_again": "Try again",
+  "global_error.title": "Critical error",
+  "global_error.reload": "Reload",
+  "not_found.title": "404",
+  "not_found.subtitle": "Page not found",
+  "not_found.description": "This page doesn't exist or was moved.",
+  "not_found.go_home": "Go home",
+  "loading.text": "Loading...",
+
+  "theme.light": "Light",
+  "theme.dark": "Dark",
+  "theme.activate_light": "Switch to light theme",
+  "theme.activate_dark": "Switch to dark theme",
+
+  "privacy.title": "Privacy Policy",
+  "privacy.last_updated": "Last updated: June 27, 2026",
+  "privacy.intro": "This privacy policy explains how animations.ink (\"the Site\") collects, uses, and protects your information when you visit. The Site is a static showcase with no forms, no accounts, no tracking, and no third-party embeds.",
+  "privacy.data_collected.title": "Data We Collect",
+  "privacy.data_collected.body": "The Site collects **no personal data whatsoever**. We do not collect your IP address, browser fingerprint, email, name, or any other identifying information. There is no backend server, no database, no analytics service, and no third-party tracking scripts.",
+  "privacy.local_storage.title": "Local Storage",
+  "privacy.local_storage.body": "To remember your preferences, the Site stores two items in your browser's localStorage: your language preference ({lang}) and theme preference ({theme}). This data stays on your device and is never transmitted to any server or third party. You can clear it at any time through your browser settings.",
+  "privacy.how_to_clear.title": "How to Clear Your Data",
+  "privacy.how_to_clear.body": "You can clear localStorage data at any time through your browser settings: in Chrome go to Settings → Privacy and Security → Clear browsing data → Cookies and other site data; in Firefox go to Settings → Privacy & Security → Cookies and Site Data → Clear Data; in Safari go to Settings → Safari → Clear History and Website Data. You can also use developer tools (F12) and clear it from the Application or Storage tab.",
+  "privacy.third_party.title": "Third-Party Services",
+  "privacy.third_party.body": "The Site uses Google Fonts (Geist) but all font files are self-hosted at build time. Visitors' browsers fetch them from the same origin (animations.ink), **never from Google's servers**. The Site does not embed any third-party content, load external scripts, or set HTTP cookies.",
+  "privacy.rights.title": "Your Rights",
+  "privacy.rights.body": "Under applicable data protection laws (including GDPR, LGPD, PIPL, PIPA, etc.), you have the right to: be informed about data collection and use; access your personal data; request rectification of inaccurate data; request erasure (\"right to be forgotten\"); restrict processing under certain conditions; data portability in a structured format; object to processing based on legitimate interests; and withdraw consent at any time. Since the Site collects virtually no data, exercising these rights typically involves clearing your browser's localStorage. For any questions, contact us using the information below.",
+  "privacy.contact.title": "Contact",
+  "privacy.contact.body": "If you have any questions about this privacy policy or wish to exercise your data protection rights, please email {email}.",
+
+  "consent.banner": "This site stores your language and theme preferences locally. No personal data is collected or transmitted.",
+  "consent.got_it": "Got it",
+
+  "contact.email": "privacy@animations.ink"
+}
