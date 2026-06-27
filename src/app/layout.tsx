@@ -135,6 +135,7 @@ export default function RootLayout({
         </ThemeProvider>
         <script
           type="application/ld+json"
+          /* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- standard JSON-LD pattern, see https://nextjs.org/docs/app/guides/json-ld */
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
           }}

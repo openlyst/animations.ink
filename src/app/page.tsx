@@ -3,11 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useI18n } from "~/lib/i18n-context";
-import LanguagePicker from "~/components/LanguagePicker";
-import ThemeSwitcher from "~/components/ThemeSwitcher";
+import BackgroundOrbs from "~/components/BackgroundOrbs";
+import Footer from "~/components/Footer";
 import ConsentBanner from "~/components/ConsentBanner";
-
-const CURRENT_YEAR = new Date().getFullYear();
 
 const projects = [
   {
@@ -49,11 +47,7 @@ export default function HomePage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[var(--color-bg-primary)]">
-      {/* Background gradient orbs */}
-      <div className="pointer-events-none fixed inset-0 overflow-hidden max-md:hidden">
-        <div className="absolute -left-[20%] -top-[10%] h-[600px] w-[600px] rounded-full blur-[120px]" style={{ backgroundColor: "var(--color-orb-1)" }} />
-        <div className="absolute -bottom-[10%] -right-[20%] h-[500px] w-[500px] rounded-full blur-[100px]" style={{ backgroundColor: "var(--color-orb-2)" }} />
-      </div>
+      <BackgroundOrbs />
 
       {/* Hero Section */}
       <section className="relative flex min-h-[60vh] flex-col items-center justify-center px-4 pt-20">
@@ -126,43 +120,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative border-t border-[var(--color-border)] px-4 py-10">
-        <div className="footer mx-auto flex max-w-5xl flex-col items-center gap-6 md:flex-row md:justify-between">
-          <div className="flex flex-col items-center gap-3 md:flex-row md:gap-6">
-            <p className="text-sm text-[var(--color-text-muted)]">
-              {t("footer.copyright", { year: CURRENT_YEAR })}
-            </p>
-            <span className="hidden text-[var(--color-text-muted)] md:inline">·</span>
-            <Link
-              href="/privacy/"
-              className="py-1.5 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-link-hover)] md:py-0"
-            >
-              {t("footer.privacy")}
-            </Link>
-            <span className="hidden text-[var(--color-text-muted)] md:inline">·</span>
-            <a
-              href={`mailto:${t("contact.email")}`}
-              className="py-1.5 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-link-hover)] md:py-0"
-            >
-              {t("footer.contact")}
-            </a>
-          </div>
-          <div className="flex items-center gap-3">
-            <LanguagePicker />
-            <ThemeSwitcher />
-            <span className="hidden text-[var(--color-text-muted)] md:inline">·</span>
-            <Link
-              href="https://gitlab.com/HttpAnimations"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="py-1.5 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-link-hover)] md:py-0"
-            >
-              {t("footer.gitlab")}
-            </Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       <ConsentBanner />
     </main>

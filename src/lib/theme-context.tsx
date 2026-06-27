@@ -15,7 +15,7 @@ interface ThemeContextValue {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(() => {
+  const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window === "undefined") return "dark";
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -24,22 +24,22 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
   });
 
-  const setTheme = useCallback((t: Theme) => {
-    setThemeState(t);
+  const updateTheme = useCallback((t: Theme) => {
+    setTheme(t);
     document.documentElement.setAttribute("data-theme", t);
     try { localStorage.setItem(STORAGE_KEY, t); } catch { /* noop */ }
   }, []);
 
   const toggleTheme = useCallback(() => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  }, [theme, setTheme]);
+    updateTheme(theme === "dark" ? "light" : "dark");
+  }, [theme, updateTheme]);
 
-  const value = useMemo(() => ({ theme, setTheme, toggleTheme }), [theme, setTheme, toggleTheme]);
+  const value = useMemo(() => ({ theme, setTheme: updateTheme, toggleTheme }), [theme, updateTheme, toggleTheme]);
 
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeContext value={value}>
       {children}
-    </ThemeContext.Provider>
+    </ThemeContext>
   );
 }
 

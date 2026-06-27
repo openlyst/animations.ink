@@ -1,40 +1,41 @@
 {
   "name": "animations",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "node scripts/build-locales.js && next build",
-    "check": "next lint && tsc --noEmit && npm run doctor",
+    "check": "eslint . && tsc --noEmit && npm run doctor",
     "doctor": "node scripts/doctor.mjs",
     "dev": "node scripts/build-locales.js && next dev --turbo",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "next build && node preview.mjs 3000",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "next": "^15.2.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4.0.15",
-    "@types/node": "^20.14.10",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "eslint": "^9.23.0",
-    "eslint-config-next": "^15.2.3",
-    "postcss": "^8.5.3",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.15",
-    "typescript": "^5.8.2",
-    "typescript-eslint": "^8.27.0"
+    "@tailwindcss/postcss": "^4.3.1",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.6.0",
+    "postcss": "^8.5.15",
+    "@eslint-react/eslint-plugin": "^5.9.5",
+    "@next/eslint-plugin-next": "^16.2.9",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "prettier": "^3.8.5",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.0"
   },
   "ct3aMetadata": {
     "initVersion": "7.40.0"

@@ -42,11 +42,11 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   })();
   const initial = (saved ?? detected) in all ? (saved ?? detected) : "en";
 
-  const [locale, setLocaleState] = useState<string>(initial);
+  const [locale, setLocale] = useState<string>(initial);
   const [translations, setTranslations] = useState<Translations>(() => all[initial] ?? en);
 
-  const setLocale = useCallback((code: string) => {
-    setLocaleState(code);
+  const updateLocale = useCallback((code: string) => {
+    setLocale(code);
     setTranslations(all[code] ?? en);
     try { localStorage.setItem(STORAGE_KEY, code); } catch { /* noop */ }
   }, []);
@@ -62,14 +62,14 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   );
 
   const value = useMemo(
-    () => ({ locale, setLocale, t: translate }),
-    [locale, setLocale, translate],
+    () => ({ locale, setLocale: updateLocale, t: translate }),
+    [locale, updateLocale, translate],
   );
 
   return (
-    <I18nContext.Provider value={value}>
+    <I18nContext value={value}>
       {children}
-    </I18nContext.Provider>
+    </I18nContext>
   );
 }
 

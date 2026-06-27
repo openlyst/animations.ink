@@ -116,10 +116,28 @@ No `box-shadow` or `drop-shadow` glows unless the user explicitly requests them.
 - Theme toggle follows the HIG principle of giving users clear control
 - No over-designed UI — prefer subtle borders and background tints over bold color blocks
 
+## Component Architecture
+
+All shared UI components live in `src/components/`. Current catalog:
+
+| Component | Path | Description |
+|---|---|---|
+| `Footer` | `src/components/Footer.tsx` | Site footer with copyright, nav links, LanguagePicker, ThemeSwitcher |
+| `BackgroundOrbs` | `src/components/BackgroundOrbs.tsx` | Decorative gradient orb blurs for page backgrounds |
+| `PrivacySection` | `src/components/PrivacySection.tsx` | Reusable privacy-policy card with icon, title, body, and optional children |
+| `Dropdown` | `src/components/Dropdown.tsx` | Generic typed dropdown with mobile `<select>` overlay |
+| `LanguagePicker` | `src/components/LanguagePicker.tsx` | Language switcher wrapping `Dropdown` with locale data |
+| `ThemeSwitcher` | `src/components/ThemeSwitcher.tsx` | Theme toggle wrapping `Dropdown` with moon/sun icons |
+| `ConsentBanner` | `src/components/ConsentBanner.tsx` | Fixed-bottom localStorage consent banner |
+
+- `BackgroundOrbs` is **not** a client component — it has no hooks, only static markup
+- `Footer` and `PrivacySection` are client components (`"use client"`) because they use `useI18n()`
+- When a privacy section needs extra content after the body (e.g. contact email link), pass it as `children`
+
 ## Code Style
 
 - **No comments** in source code unless the user asks
-- Follow existing component patterns (see `LanguagePicker`, `ThemeSwitcher`, `page.tsx`)
+- Follow existing component patterns (see `Footer`, `LanguagePicker`, `page.tsx`)
 - Use `"use client"` for any component using hooks (i18n, theme, state)
 - Tailwind v4 arbitrary values for dynamic values: `bg-[var(--color-x)]`, `rounded-[calc(16.180340px*1.618)]`
 - Colors that change with theme must use CSS custom properties, never hardcoded Tailwind classes
@@ -133,4 +151,4 @@ Before marking complete, run:
 npm run check
 ```
 
-This runs `next lint` → `tsc --noEmit` → `node scripts/doctor.mjs`. All three must pass with **0 errors, 0 warnings**.
+This runs `next lint` → `tsc --noEmit` → `node scripts/doctor.mjs`. All three must pass with **0 errors, 0 warnings** — including any warnings introduced by dependency upgrades. Every warning must be resolved, never ignored.
