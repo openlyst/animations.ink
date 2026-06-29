@@ -116,6 +116,32 @@ body {
 .project-card:nth-child(5) { animation-delay: 0.583592s; }
 .project-card:nth-child(6) { animation-delay: 0.729490s; }
 
+.deprecated-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #78350f;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6.180340px,
+    rgba(251, 191, 36, 0.3) 6.180340px,
+    rgba(251, 191, 36, 0.3) 12.360680px
+  );
+  border-bottom-left-radius: 10px;
+  padding: 3.819660px 10px;
+}
+
+.deprecated-badge-text {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fffbeb;
+  white-space: nowrap;
+}
+
 .privacy-card {
   opacity: 0;
   transform: translateY(16px);

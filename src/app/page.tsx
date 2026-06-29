@@ -15,6 +15,9 @@ const projects = [
     repo: "https://gitlab.com/HttpAnimations/vidlatte",
     descKey: "projects.vidlatte.description",
     favicon: "https://vidlatte.ink/apple-touch-icon.png",
+    hasSource: true,
+    hasLivesiteURL: true,
+    isDeprecated: false,
   },
   {
     id: "animations",
@@ -23,6 +26,9 @@ const projects = [
     repo: "https://gitlab.com/HttpAnimations/animations.ink",
     descKey: "projects.animations.description",
     favicon: "https://animations.ink/favicon.ico",
+    hasSource: true,
+    hasLivesiteURL: true,
+    isDeprecated: false,
   },
   {
     id: "klit",
@@ -31,6 +37,9 @@ const projects = [
     repo: "https://gitlab.com/HttpAnimations/open621",
     descKey: "projects.klit.description",
     favicon: "https://klit.animations.ink/icon.svg",
+    hasSource: true,
+    hasLivesiteURL: true,
+    isDeprecated: false,
   },
   {
     id: "openlyst",
@@ -39,6 +48,9 @@ const projects = [
     repo: "https://gitlab.com/Openlyst/",
     descKey: "projects.openlyst.description",
     favicon: "https://openlyst.ink/favicon.svg",
+    hasSource: true,
+    hasLivesiteURL: true,
+    isDeprecated: false,
   },
   {
     id: "piconeo2-wivrn",
@@ -47,6 +59,9 @@ const projects = [
     repo: "https://gitlab.com/HttpAnimations/piconeo2-wivrn",
     descKey: "projects.piconeo2_wivrn.description",
     favicon: "/piconeo2-wivrn.svg",
+    hasSource: true,
+    hasLivesiteURL: false,
+    isDeprecated: true,
   },
 ];
 
@@ -79,7 +94,12 @@ export default function HomePage() {
           <div className="grid gap-[16.180340px] md:grid-cols-2">
             {projects.map((project) => (
               <div key={project.id} className="project-card">
-                <div className="group rounded-[16.180340px] border border-[var(--color-border)] bg-[var(--color-bg-card)] p-[26.180340px] transition-all duration-300 hover:border-[var(--color-border-hover)] hover:bg-[var(--color-bg-hover)]">
+                <div className="group relative overflow-hidden rounded-[16.180340px] border border-[var(--color-border)] bg-[var(--color-bg-card)] p-[26.180340px] transition-all duration-300 hover:border-[var(--color-border-hover)] hover:bg-[var(--color-bg-hover)]">
+                  {project.isDeprecated && (
+                    <div className="deprecated-badge">
+                      <span className="deprecated-badge-text">{t("projects.deprecated")}</span>
+                    </div>
+                  )}
 
                   <div className="relative">
                     <div className="mb-4 flex items-center gap-3">
@@ -102,23 +122,29 @@ export default function HomePage() {
                     </p>
 
                     <div className="flex items-center gap-2">
-                      <Link
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-[var(--color-text-link)] transition-colors hover:text-[var(--color-text-link-hover)]"
-                      >
-                        {t("projects.live_site")}
-                      </Link>
-                      <span className="text-[var(--color-text-muted)]">·</span>
-                      <Link
-                        href={project.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text-link)]"
-                      >
-                        {t("projects.source")}
-                      </Link>
+                      {project.hasLivesiteURL && (
+                        <Link
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-[var(--color-text-link)] transition-colors hover:text-[var(--color-text-link-hover)]"
+                        >
+                          {t("projects.live_site")}
+                        </Link>
+                      )}
+                      {project.hasLivesiteURL && project.hasSource && (
+                        <span className="text-[var(--color-text-muted)]">·</span>
+                      )}
+                      {project.hasSource && (
+                        <Link
+                          href={project.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text-link)]"
+                        >
+                          {t("projects.source")}
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -6,6 +6,7 @@
 
   "projects.live_site": "Открыть →",
   "projects.source": "Исходники",
+  "projects.deprecated": "Устарел",
   "projects.vidlatte.description": "Платформа для ИИ в духе Plex. Генерация картинок через ComfyUI и чат с LLM.",
   "projects.animations.description": "Портфолио проектов. Next.js, Tailwind CSS и TypeScript.",
   "projects.klit.description": "Фронтенд для имиджбордов. Чистый дизайн, плавные анимации.",

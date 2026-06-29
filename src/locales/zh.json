@@ -6,6 +6,7 @@
 
   "projects.live_site": "去看看 →",
   "projects.source": "源码",
+  "projects.deprecated": "已弃用",
   "projects.vidlatte.description": "Plex 风格的 AI 平台。用 ComfyUI 本地生图，还能跟 LLM 聊天。",
   "projects.animations.description": "项目展示与落地页。用 Next.js 和 Tailwind 搭建，风格简洁。",
   "projects.klit.description": "清爽的图站前端。设计简洁，动画流畅，默认屏蔽敏感内容。",

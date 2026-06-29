@@ -6,6 +6,7 @@
 
   "projects.live_site": "Live site →",
   "projects.source": "Source",
+  "projects.deprecated": "Deprecated",
   "projects.vidlatte.description": "Plex-like platform for AI. Self-hosted image generation with ComfyUI and LLM chat.",
   "projects.animations.description": "Project showcase and landing page. Built with Next.js and Tailwind.",
   "projects.klit.description": "Modern frontend for image boards. Clean design, smooth animations, and safe browsing by default.",
