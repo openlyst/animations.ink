@@ -43,7 +43,6 @@ const projects = [
   {
     id: "piconeo2-wivrn",
     name: "Pico Neo 2 WiVRn",
-    url: "https://gitlab.com/HttpAnimations/piconeo2-wivrn",
     repo: "https://gitlab.com/HttpAnimations/piconeo2-wivrn",
     descKey: "projects.piconeo2_wivrn.description",
     favicon: "/piconeo2-wivrn.svg",
@@ -102,15 +101,19 @@ export default function HomePage() {
                     </p>
 
                     <div className="flex items-center gap-2">
-                      <Link
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-[var(--color-text-link)] transition-colors hover:text-[var(--color-text-link-hover)]"
-                      >
-                        {t("projects.live_site")}
-                      </Link>
-                      <span className="text-[var(--color-text-muted)]">·</span>
+                      {project.url && (
+                        <>
+                          <Link
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-[var(--color-text-link)] transition-colors hover:text-[var(--color-text-link-hover)]"
+                          >
+                            {t("projects.live_site")}
+                          </Link>
+                          <span className="text-[var(--color-text-muted)]">·</span>
+                        </>
+                      )}
                       <Link
                         href={project.repo}
                         target="_blank"

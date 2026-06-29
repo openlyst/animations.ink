@@ -66,7 +66,6 @@ const jsonLd = {
       applicationCategory: "GameApplication",
       description:
         "Native VR client for Pico Neo 2. Stream PCVR gameplay over WiFi or USB to Linux.",
-      url: "https://gitlab.com/HttpAnimations/piconeo2-wivrn",
     },
   ],
 };
