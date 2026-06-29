@@ -114,6 +114,7 @@ body {
 .project-card:nth-child(3) { animation-delay: 0.291796s; }
 .project-card:nth-child(4) { animation-delay: 0.437694s; }
 .project-card:nth-child(5) { animation-delay: 0.583592s; }
+.project-card:nth-child(6) { animation-delay: 0.729490s; }
 
 .privacy-card {
   opacity: 0;

@@ -60,6 +60,14 @@ const jsonLd = {
         "Free & open-source apps for privacy, freedom, and community. Creators of DouDou music player.",
       url: "https://openlyst.ink",
     },
+    {
+      "@type": "SoftwareApplication",
+      name: "Pico Neo 2 WiVRn",
+      applicationCategory: "GameApplication",
+      description:
+        "Native VR client for Pico Neo 2. Stream PCVR gameplay over WiFi or USB to Linux.",
+      url: "https://gitlab.com/HttpAnimations/piconeo2-wivrn",
+    },
   ],
 };
 
