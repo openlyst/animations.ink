@@ -2,11 +2,11 @@
   "language.code": "zh",
   "language.name": "中文",
 
-  "hero.tagline": "{author} 的项目合集。做些好用、能自己部署、还好看的 AI 工具。",
+  "hero.tagline": "{author} 的项目精选。专注于自托管软件与开源工具，重视隐私、自主权与精致设计。",
 
   "projects.live_site": "去看看 →",
   "projects.source": "源码",
-  "projects.vidlatte.description": "Plex 风格的 AI 平台。用 ComfyUI 本地生图，还能跟 LLM 聊天。",
+  "projects.vidlatte.description": "自托管创意平台，支持图像生成与实时对话。完全运行在您自己的基础设施上。",
   "projects.animations.description": "项目展示与落地页。用 Next.js 和 Tailwind 搭建，风格简洁。",
   "projects.klit.description": "清爽的图站前端。设计简洁，动画流畅，默认屏蔽敏感内容。",
   "projects.openlyst.description": "开源应用，关注隐私、自由与社区。DouDou 音乐播放器就是他们做的。",

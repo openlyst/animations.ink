@@ -2,11 +2,11 @@
   "language.code": "ru",
   "language.name": "Русский",
 
-  "hero.tagline": "Проекты {author}. Делаем ИИ удобным для самостоятельного хостинга.",
+  "hero.tagline": "Подборка проектов от {author}. Самостоятельно размещаемое программное обеспечение и инструменты с открытым исходным кодом, ориентированные на конфиденциальность, автономность и продуманный дизайн.",
 
   "projects.live_site": "Открыть →",
   "projects.source": "Исходники",
-  "projects.vidlatte.description": "Платформа для ИИ в духе Plex. Генерация картинок через ComfyUI и чат с LLM.",
+  "projects.vidlatte.description": "Самостоятельно размещаемая платформа для генерации изображений и общения в реальном времени. Полностью на вашей инфраструктуре.",
   "projects.animations.description": "Портфолио проектов. Next.js, Tailwind CSS и TypeScript.",
   "projects.klit.description": "Фронтенд для имиджбордов. Чистый дизайн, плавные анимации.",
   "projects.openlyst.description": "Бесплатные open-source приложения. Приватность, свобода и сообщество.",

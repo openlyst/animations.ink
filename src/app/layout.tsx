@@ -25,7 +25,7 @@ const jsonLd = {
       name: "vidlatte.ink",
       applicationCategory: "Multimedia",
       description:
-        "Plex-like platform for AI. Self-hosted image generation with ComfyUI and LLM chat.",
+        "Self-hosted creative platform for image generation and real-time chat. Runs entirely on your own infrastructure.",
       url: "https://vidlatte.ink",
     },
     {
@@ -77,13 +77,13 @@ export const metadata: Metadata = {
     template: "%s | animations.ink",
   },
   description:
-    "A curated collection of projects by HttpAnimations. Explore vidlatte.ink, BeatSaberMappingSite, and more innovative open-source tools for AI, creativity, and self-hosting.",
+    "A curated collection of projects by HttpAnimations. Explore vidlatte.ink, openlyst.ink, and more open-source tools for self-hosting, privacy, and creativity.",
   keywords: [
     "HttpAnimations",
     "open source",
     "projects",
     "vidlatte",
-    "AI tools",
+    "privacy tools",
     "self-hosted",
     "Beat Saber",
     "image boards",
