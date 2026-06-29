@@ -10,6 +10,7 @@
   "projects.animations.description": "Портфолио проектов. Next.js, Tailwind CSS и TypeScript.",
   "projects.klit.description": "Фронтенд для имиджбордов. Чистый дизайн, плавные анимации.",
   "projects.openlyst.description": "Бесплатные open-source приложения. Приватность, свобода и сообщество.",
+  "projects.piconeo2_wivrn.description": "Нативный VR-клиент для Pico Neo 2. Стриминг PCVR через WiFi или USB на Linux. Экспериментальное отслеживание на базе OpenXR.",
 
   "footer.copyright": "© {year} HttpAnimations",
   "footer.gitlab": "gitlab.com/HttpAnimations",

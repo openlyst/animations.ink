@@ -10,6 +10,7 @@
   "projects.animations.description": "项目展示与落地页。用 Next.js 和 Tailwind 搭建，风格简洁。",
   "projects.klit.description": "清爽的图站前端。设计简洁，动画流畅，默认屏蔽敏感内容。",
   "projects.openlyst.description": "开源应用，关注隐私、自由与社区。DouDou 音乐播放器就是他们做的。",
+  "projects.piconeo2_wivrn.description": "Pico Neo 2 原生 VR 客户端。通过 WiFi 或 USB 将 PCVR 串流到 Linux。基于 OpenXR 的实验性追踪与输入。",
 
   "footer.copyright": "© {year} HttpAnimations",
   "footer.gitlab": "gitlab.com/HttpAnimations",

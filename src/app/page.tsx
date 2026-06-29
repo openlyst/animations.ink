@@ -40,6 +40,14 @@ const projects = [
     descKey: "projects.openlyst.description",
     favicon: "https://openlyst.ink/favicon.svg",
   },
+  {
+    id: "piconeo2-wivrn",
+    name: "Pico Neo 2 WiVRn",
+    url: "https://gitlab.com/HttpAnimations/piconeo2-wivrn",
+    repo: "https://gitlab.com/HttpAnimations/piconeo2-wivrn",
+    descKey: "projects.piconeo2_wivrn.description",
+    favicon: "/piconeo2-wivrn.svg",
+  },
 ];
 
 export default function HomePage() {
