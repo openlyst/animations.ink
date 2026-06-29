@@ -2,11 +2,11 @@
   "language.code": "en",
   "language.name": "English",
 
-  "hero.tagline": "A curated collection of projects by {author}. Building tools that make AI accessible, self-hosted, and beautiful.",
+  "hero.tagline": "Creating FOSS apps and sites.",
 
   "projects.live_site": "Live site →",
   "projects.source": "Source",
-  "projects.vidlatte.description": "Plex-like platform for AI. Self-hosted image generation with ComfyUI and LLM chat.",
+  "projects.vidlatte.description": "Self-hosted creative platform for image generation and real-time chat. Runs entirely on your own infrastructure.",
   "projects.animations.description": "Project showcase and landing page. Built with Next.js and Tailwind.",
   "projects.klit.description": "Modern frontend for image boards. Clean design, smooth animations, and safe browsing by default.",
   "projects.openlyst.description": "Free & open-source apps for privacy, freedom, and community. Creators of DouDou music player.",

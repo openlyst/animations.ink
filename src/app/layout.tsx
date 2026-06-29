@@ -25,7 +25,7 @@ const jsonLd = {
       name: "vidlatte.ink",
       applicationCategory: "Multimedia",
       description:
-        "Plex-like platform for AI. Self-hosted image generation with ComfyUI and LLM chat.",
+        "Self-hosted creative platform for image generation and real-time chat. Runs entirely on your own infrastructure.",
       url: "https://vidlatte.ink",
     },
     {
@@ -73,17 +73,17 @@ const jsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "animations.ink — HttpAnimations Project Showcase",
+    default: "animations.ink",
     template: "%s | animations.ink",
   },
   description:
-    "A curated collection of projects by HttpAnimations. Explore vidlatte.ink, BeatSaberMappingSite, and more innovative open-source tools for AI, creativity, and self-hosting.",
+    "A curated collection of projects by HttpAnimations. Explore vidlatte.ink, openlyst.ink, and more open-source tools for self-hosting, privacy, and creativity.",
   keywords: [
     "HttpAnimations",
     "open source",
     "projects",
     "vidlatte",
-    "AI tools",
+    "privacy tools",
     "self-hosted",
     "Beat Saber",
     "image boards",
@@ -97,9 +97,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "animations.ink — HttpAnimations Project Showcase",
+    title: "animations.ink",
     description:
-      "A curated collection of projects by HttpAnimations. Explore vidlatte.ink, BeatSaberMappingSite, and more innovative open-source tools.",
+      "Creating FOSS apps and sites.",
     url: siteUrl,
     siteName: "animations.ink",
     locale: "en_US",
@@ -107,9 +107,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "animations.ink — HttpAnimations Project Showcase",
+    title: "animations.ink",
     description:
-      "A curated collection of projects by HttpAnimations. Explore vidlatte.ink and more innovative open-source tools.",
+      "Creating FOSS apps and sites.",
   },
   icons: [
     { rel: "icon", url: "/favicon.ico" },
