@@ -57,7 +57,7 @@ const jsonLd = {
       name: "openlyst.ink",
       applicationCategory: "WebApplication",
       description:
-        "Free & open-source apps for privacy, freedom, and community. Creators of DouDou music player.",
+        "Creating FOSS apps",
       url: "https://openlyst.ink",
     },
     {

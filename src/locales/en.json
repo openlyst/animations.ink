@@ -9,7 +9,7 @@
   "projects.vidlatte.description": "Self-hosted creative platform for image generation and real-time chat. Runs entirely on your own infrastructure.",
   "projects.animations.description": "Project showcase and landing page. Built with Next.js and Tailwind.",
   "projects.klit.description": "Modern frontend for image boards. Clean design, smooth animations, and safe browsing by default.",
-  "projects.openlyst.description": "Free & open-source apps for privacy, freedom, and community. Creators of DouDou music player.",
+  "projects.openlyst.description": "Creating FOSS apps",
   "projects.piconeo2_wivrn.description": "Native VR client for Pico Neo 2. Stream PCVR gameplay over WiFi or USB to Linux. Experimental OpenXR-based tracking and input.",
 
   "footer.copyright": "© {year} HttpAnimations",
