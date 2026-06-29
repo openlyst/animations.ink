@@ -73,7 +73,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "animations.ink — HttpAnimations Project Showcase",
+    default: "animations.ink",
     template: "%s | animations.ink",
   },
   description:
@@ -97,9 +97,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "animations.ink — HttpAnimations Project Showcase",
+    title: "animations.ink",
     description:
-      "A curated collection of projects by HttpAnimations. Explore vidlatte.ink, BeatSaberMappingSite, and more innovative open-source tools.",
+      "Creating FOSS apps and sites.",
     url: siteUrl,
     siteName: "animations.ink",
     locale: "en_US",
@@ -107,9 +107,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "animations.ink — HttpAnimations Project Showcase",
+    title: "animations.ink",
     description:
-      "A curated collection of projects by HttpAnimations. Explore vidlatte.ink and more innovative open-source tools.",
+      "Creating FOSS apps and sites.",
   },
   icons: [
     { rel: "icon", url: "/favicon.ico" },
