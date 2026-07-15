@@ -11,6 +11,7 @@
   "projects.klit.description": "Modern frontend for image boards. Clean design, smooth animations, and safe browsing by default.",
   "projects.openlyst.description": "Free & open-source apps for privacy, freedom, and community. Creators of DouDou music player.",
   "projects.piconeo2_wivrn.description": "Native VR client for Pico Neo 2. Stream PCVR gameplay over WiFi or USB to Linux. Experimental OpenXR-based tracking and input.",
+  "projects.neorevived.description": "Static, account-free tracker for the Pico Neo 2 headset revival effort. Specs, shims, streaming guides, and community news, all contributed via merge requests.",
 
   "footer.copyright": "© {year} HttpAnimations",
   "footer.gitlab": "gitlab.com/HttpAnimations",
