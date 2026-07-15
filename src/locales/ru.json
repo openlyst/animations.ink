@@ -11,6 +11,7 @@
   "projects.klit.description": "Фронтенд для имиджбордов. Чистый дизайн, плавные анимации.",
   "projects.openlyst.description": "Бесплатные open-source приложения. Приватность, свобода и сообщество.",
   "projects.piconeo2_wivrn.description": "Нативный VR-клиент для Pico Neo 2. Стриминг PCVR через WiFi или USB на Linux. Экспериментальное отслеживание на базе OpenXR.",
+  "projects.neorevived.description": "Статичный трекер без аккаунтов для возрождения гарнитуры Pico Neo 2. Спецификации, шимы, гайды по стримингу и новости сообщества — всё через merge-запросы.",
 
   "footer.copyright": "© {year} HttpAnimations",
   "footer.gitlab": "gitlab.com/HttpAnimations",

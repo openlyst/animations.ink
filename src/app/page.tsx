@@ -47,6 +47,14 @@ const projects = [
     descKey: "projects.piconeo2_wivrn.description",
     favicon: "/piconeo2-wivrn.svg",
   },
+  {
+    id: "neorevived",
+    name: "NeoRevived",
+    url: "https://neorevived-a86a44.gitlab.io/",
+    repo: "https://gitlab.com/HttpAnimations/neorevived",
+    descKey: "projects.neorevived.description",
+    favicon: "/neorevived.svg",
+  },
 ];
 
 export default function HomePage() {
