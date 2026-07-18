@@ -50,7 +50,7 @@ const projects = [
   {
     id: "neorevived",
     name: "NeoRevived",
-    url: "https://neorevived-a86a44.gitlab.io/",
+    url: "https://gitlab.com/HttpAnimations/neorevived",
     repo: "https://gitlab.com/HttpAnimations/neorevived",
     descKey: "projects.neorevived.description",
     favicon: "/neorevived.svg",
